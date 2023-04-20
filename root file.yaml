@@ -120,11 +120,20 @@ info:
 
       3 -  The merchant system then calls the secure-pay API to retrieve a cashierURL from Pockyt.
 
-      4 -  
+      4 -  Using the cashierURL, the customer is redirected to Pockyt's hosted payment form.
 
+      5 - After the payment is completed, Pockyt redirects the customer back to the merchant's payment result page using the provided callback URL in the request body of the secure-pay API.
+
+      6 - Pockyt relays the transaction results to the merchant's website using the IPN callback function.
+
+      7 - To receive the payment results, the merchant website creates an IPN listener page and uses its URL in the request body of the secure-pay API.
+
+      8 - The merchant's website displays the payment confirmation message to the customer.
 
     ## Implementation Option 2 - Integrated Payments
-  
+    Pockyt Integrated Payments offers a highly customizable payment form for businesses that want to retain complete control over the payment process. 
+    This method enables businesses to build their user interface for all preferred payment methods, providing a seamless payment experience for their customers.
+    Merchants have the option to integrate Pockyt's APIs directly into their system for self-hosted mobile payments, or they can accept customer payments by integrating their system with Braintree, using both the /secure-pay API and the /process API.  
   contact: {}
 host: https://mapi.Pockyt.yunkeguan.com
 basePath: /
