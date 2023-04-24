@@ -138,6 +138,7 @@ consumes:
 produces:
   - application/json
 paths:
+  /Securepayment  
     post:
       description: |-
         ## Request URL
