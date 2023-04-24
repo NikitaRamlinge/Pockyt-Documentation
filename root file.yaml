@@ -315,10 +315,8 @@ paths:
       *  Braintree complies with the request and passes the transaction results to Pockyt, who relays them back to the merchant website.
     
       Process + /SecurePay API Workflow Diagram
-
-      Add image
-
-    /Integratedpayment:
+      
+/Integrated payment:
         post:
           description: |-
             ## Request URL
