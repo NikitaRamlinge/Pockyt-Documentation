@@ -140,13 +140,13 @@ produces:
 paths:
   /Securepayment  
       post
-      description: |-
+      description:|-
         ## Request URL
 
-        POST "https://mapi.yuansfer.com/online/v3/secure-pay"
+POST "https://mapi.yuansfer.com/online/v3/secure-pay"
 
-        Secure Payment API enables merchant websites to send customers to Pockyt for payment processing.
-      
+      Secure Payment API enables merchant websites to send customers to Pockyt for payment processing.
+
       summary: Securepayment
       tags:
         - Authentication
