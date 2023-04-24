@@ -187,85 +187,85 @@ paths:
           type: string
           description: |-
            Required- A unique value created and assigned by Pockyt’s support team during the onboarding process
-          - name: amount
+        - name: amount
           in: header
           required: true
           type: string
           description: |-
            Required- The transaction amount
-          - name: currency 
+        - name: currency 
           in: header
           required: true
           type: string
           description: |-
            Required- when the currency is "GBP", the settlement currency is "GBP". All other currencies settle with "USD
-          name: vendor 
+        - name: vendor 
           in: header
           required: true
           type: string
           description: |-
            Required- the possible payment channels are "alipay","wechatpay", "paypal", "venmo", "unionpay", "creditcard","truemoney", "alipay_hk", "tng", "gcash", "dana", "kakaopay","bkash", "easypaisa","cashapppay"
-        name: ipUrl 
+        - name: ipUrl 
           in: header
           required: true
           type: string
           description: |-
            Required- the asynchronous notification address. The IPN URL must be secure. For more information, visit the IPN section.
-        name: callbackUrl 
+        - name: callbackUrl 
           in: header
           required: true
           type: string
           description: |-
            Required- the synchronous callback HTTP address to receive notification messages for events. The callback URL follows macro substitution rules like xxxcallback_url?trans_no= {amount}&amount={amount}. Then Pockyt automatically replaces the values of {} for a list of parameters.
-        name: reference 
+        - name: reference 
           in: header
           required: true
           type: string
           description: |-
            Required- the Invoice Number of the transaction in the merchant's system.
-        name: terminal
+        - name: terminal
           in: header
           required: true
           type: string
           description: |-
            Required- the possible values are: "ONLINE" for desktop/web app and "WAP" for mobile, YIP for Braintree.
-        name: description 
+        - name: description 
           in: header
           required: true
           type: string
           description: |-
            Required- The description of the transaction will be displayed on the invoice.
-        name: note 
+        - name: note 
           in: header
           required: true
           type: string
           description: |-
            Required- The payments notes
-        name: OsType 
+        - name: OsType 
           in: header
           required: true
           type: string
           description: |-
            Required- Required when terminal is WAP or APP, the possible values are "IOS" and "ANDROID".
-        name: timeout 
+        - name: timeout 
           in: header
           required: true
           type: string
           description: |-
            Required- The timeout in minutes. The default value is 120.
-        name: goodsInfo
+        - name: goodsInfo
           in: header
           required: true
           type: string
           description: |-
            Required- Optional- JSON encoded string of an array of items that the customer purchases from the merchant; Special characters are not supported. e.g.: [{"goods_name":"name1","quantity":"quantity1"}, {"goods_name":"name2","quantity":"quantity2"}]
-        name: creditType
+        - name: creditType
           in: header
           required: true
           type: string
           description: |-
            Required- Optional- The payment type. This is only required when vendor = creditcard. The values are "normal" or "CIT". The default is "normal".
-        name: verifySign
+        - name: verifySign
           in: header
           required: true
           type: string
@@ -289,7 +289,7 @@ paths:
             example:
               emailId: '{{emailId}}'
               userSecret: '{{userSecret}}'
-      name: ret_code
+        - name: ret_code
           in: header
           required: false
           enum:
