@@ -100,7 +100,7 @@ paths:
       parameters:
         - name: customerNo
           in: header
-          required: true
+          required: false
           type: string
           description: Optional- the user's ID in Pockyt System; include this parameter if you wish to map a customer with the payment and request a secure checkout.
         - name: merchantNo 
@@ -108,12 +108,12 @@ paths:
           required: true
           type: string
           description: |-
-           Required- A unique value created and assigned by Pockyt’s support team during the onboarding process
+           Required- A unique value created and assigned by Pockyt`s support team during the onboarding process
         - name: storeNo
           in:header
           required: true
           type: string
-          description: Required- A unique value created and assigned by Pockyt’s support team during the onboarding process.
+          description: Required- A unique value created and assigned by Pockyt`s support team during the onboarding process.
         - name: amount
           in: header
           required: true
