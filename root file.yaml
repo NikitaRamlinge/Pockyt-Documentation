@@ -136,7 +136,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /Secure payment:
+/Securepayment:
     post:
       description: |-
         ## Request URL
@@ -145,7 +145,7 @@ paths:
 
         Secure Payment API enables merchant websites to send customers to Pockyt for payment processing.
       
-      summary: Secure payment
+      summary: Securepayment
       tags:
         - Authentication
       operationId: Securepayment
@@ -165,15 +165,14 @@ paths:
           required: true
           type: string
           description: |-
-           Required- A unique value created and assigned by Pockyt’s support team during the onboarding process
-
+           Required- A unique value created and assigned by Pockyt`s support team during the onboarding process
         - name: storeNo
           in: header
           required: false
           enum:
             - text/plain
           type: string
-          description: Required- A unique value created and assigned by Pockyt’s support team during the onboarding process.
+          description: Required- A unique value created and assigned by Pockyt`s support team during the onboarding process.
         - name: body
           in: body
           required: true
@@ -200,77 +199,9 @@ paths:
         '400':
           description: Incorrect username or password.
           headers: {}
-  /Integrated Payment:
-    post:
-      description: IntegratedPayment 
-      summary: Integrated Payment 
-
-      tags:
-        - Authentication
-      operationId: IntegratedPayment
-      deprecated: false
-      produces:
-        - application/json
-      consumes:
-        - text/plain
-      parameters:
-        - name: Content-Type
-          in: header
-          required: false
-          enum:
-            - text/plain
-          type: string
-          description: ''
-        - name: body
-          in: body
-          required: true
-          description: ''
-          schema:
-            example:
-              emailId: '{{emailId}}'
-            type: string
-      responses:
-        '200':
-          description: ''
-          headers: {}
-  /PrePay:
-    post:
-      description: PrePay
-      summary: PrePay
-      tags:
-        - Authentication
-      operationId: PrePay
-      deprecated: false
-      produces:
-        - application/json
-      consumes:
-        - text/plain
-      parameters:
-        - name: Content-Type
-          in: header
-          required: false
-          enum:
-            - text/plain
-          type: string
-          description: ''
-        - name: body
-          in: body
-          required: true
-          description: ''
-          schema:
-            example:
-              oldPassword: string
-              newPassword: string
-            type: string
-      responses:
-        '200':
-          description: ''
-          headers: {}
-  
-  
 tags:
   - name: Authentication
-    description: ''
+    description: 'Add description'
   
     
   
