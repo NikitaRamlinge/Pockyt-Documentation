@@ -173,7 +173,7 @@ paths:
   /Securepayment  
       post
       description:|-
-        ## Request URL
+      ## Request URL
 
 POST "https://mapi.yuansfer.com/online/v3/secure-pay"
 
