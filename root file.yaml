@@ -144,12 +144,12 @@ paths:
           required: true
           type: string
           description: Required- the synchronous callback HTTP address to receive notification messages for events. The callback URL follows macro substitution rules like xxxcallback_url?trans_no= {amount}&amount={amount}. Then Pockyt automatically replaces the values of {} for a list of parameters.
-	- name: reference
+	      - name: reference
           in: header
           required: true
           type: string
           description: Required- the Invoice Number of the transaction in the merchant's system
-	- name: terminal
+	      - name: terminal
           in: header
           required: true
           type: string
@@ -159,7 +159,7 @@ paths:
           required: true
           type: string
           description: Optional- The description of the transaction will be displayed on the invoice.
-	- name: note
+	      - name: note
           in: header
           required: true
           type: string
@@ -169,27 +169,27 @@ paths:
           required: true
           type: string
           description: Required when terminal is WAP or APP, the possible values are "IOS" and "ANDROID".
-	- name: timeout
+	      - name: timeout
           in: header
           required: true
           type: string
           description: Optional-The timeout in minutes. The default value is 120.
-	- name: goodsInfo
+	      - name: goodsInfo
           in: header
           required: true
           type: string
           description: Optional- JSON encoded string of an array of items that thecustomer purchases from the merchant; Special characters are not supported. e.g.: [{"goods_name":"name1", "quantity":"quantity1"}, {"goods_name":"name2", "quantity":"quantity2"}]
-	- name: creditType
+	      - name: creditType
           in: header
           required: true
           type: string
           description: Optional- The payment type. This is only required when vendor = creditcard. The values are "normal" or "CIT". The default is "normal".
-	- name: verifySign
+	      - name: verifySign
           in: header
           required: true
           type: string
           description: Required- the parameter signature. It is the calculated MD5 hash value of the API token used to encrypt the request message and authorize transaction requests. For more information, visit Signing API Parameters
-	- name: storeNo
+	      - name: storeNo
           in: header
           required: false
           enum:
