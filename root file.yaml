@@ -1,6 +1,9 @@
 swagger: '2.0'
 info:
   version: '1.0'
+  license: Paid 
+  name: Pockyt
+  url:
   title: Pockyt API 
   description: |-
     # Introduction
@@ -120,7 +123,6 @@ info:
 
       3 -  The merchant system then calls the secure-pay API to retrieve a cashierURL from Pockyt.
 
-      4 -  
 
 
     ## Implementation Option 2 - Integrated Payments
@@ -168,7 +170,7 @@ paths:
            Required- A unique value created and assigned by Pockyt`s support team during the onboarding process
         - name: storeNo
           in: header
-          required: false
+          required: True
           enum:
             - text/plain
           type: string
