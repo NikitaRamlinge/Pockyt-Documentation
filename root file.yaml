@@ -148,7 +148,7 @@ paths:
       summary: Secure payment
       tags:
         - Authentication
-      operationId: Secure payment
+      operationId: Securepayment
       deprecated: false
       produces:
         - application/json
@@ -157,7 +157,7 @@ paths:
       parameters:
         - name: customerNo
           in: header
-          required: true
+          required: false
           type: string
           description: Optional- the user's ID in Pockyt System; include this parameter if you wish to map a customer with the payment and request a secure checkout.
         - name: merchantNo 
@@ -202,12 +202,12 @@ paths:
           headers: {}
   /Integrated Payment:
     post:
-      description: Integrated Payment 
+      description: IntegratedPayment 
       summary: Integrated Payment 
 
       tags:
         - Authentication
-      operationId: Integrated Payment
+      operationId: IntegratedPayment
       deprecated: false
       produces:
         - application/json
