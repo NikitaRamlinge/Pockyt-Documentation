@@ -139,7 +139,7 @@ produces:
   - application/json
 paths:
   /Securepayment  
-    post:
+      post
       description: |-
         ## Request URL
 
