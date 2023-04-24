@@ -170,13 +170,13 @@ paths:
           required: true
           type: string
           description: |-
-           Required- A unique value created and assigned by Pockyt’s support team during the onboarding process
+           Required- A unique value created and assigned by Pockyt`s support team during the onboarding process
         - name: StoreNo 
           in: header
           required: true
           type: string
           description: |-
-           Required- A unique value created and assigned by Pockyt’s support team during the onboarding process
+           Required- A unique value created and assigned by Pockyt`s support team during the onboarding process
         - name: amount
           in: header
           required: true
@@ -303,7 +303,7 @@ paths:
 
     **Pockyt Integrated Payments Workflow (Braintree)**
     Integrating the merchant system with Braintree will allow your customers to utilize digital wallets such as Google Pay, Apple Pay, Paypal, and Venmo to make payments for purchases secured on your website.
-    You can use Pockyt’s process API (discussed below) and/or secure-pay API (discussed earlier) to integrate with Braintree. 
+    You can use Pockyt`s process API (discussed below) and/or secure-pay API (discussed earlier) to integrate with Braintree. 
     The first step is to create a Braintree account and then add the Braintree JavaScript SDK to the web page to accept payments and remain PCI-compliant.
     Soon after creating an account, the merchant system will receive a payment_method_nonce, which is a one-time-use reference ID for the payment method.
     **API Workflow for Merchants**
@@ -313,9 +313,7 @@ paths:
       *  Upon customer confirmation, the merchant system calls the process API to initiate the transaction. 
       *  Pockyt uses the payment_method_nonce and transaction ID to request that Braintree process the payment.
       *  Braintree complies with the request and passes the transaction results to Pockyt, who relays them back to the merchant website.
-    
-      Process + /SecurePay API Workflow Diagram
-      
+
 /Integrated payment:
         post:
           description: |-
@@ -323,7 +321,7 @@ paths:
     
             POST "https://mapi.yuansfer.com/creditpay/v3/proces"
     
-            Upon confirmation by the customer, the merchant’s system will call the process API to initiate the transaction.'
+            Upon confirmation by the customer, the merchant`s system will call the process API to initiate the transaction.'
 
       /IntegratedPayment:
     post:
