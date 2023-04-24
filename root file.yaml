@@ -133,7 +133,13 @@ info:
     ## Implementation Option 2 - Integrated Payments
     Pockyt Integrated Payments offers a highly customizable payment form for businesses that want to retain complete control over the payment process. 
     This method enables businesses to build their user interface for all preferred payment methods, providing a seamless payment experience for their customers.
-    Merchants have the option to integrate Pockyt's APIs directly into their system for self-hosted mobile payments, or they can accept customer payments by integrating their system with Braintree, using both the /secure-pay API and the /process API.  
+    Merchants have the option to integrate Pockyt's APIs directly into their system for self-hosted mobile payments, or they can accept customer payments by integrating their system with Braintree, using both the /secure-pay API and the /process API. 
+
+    **Pockyt Integrated Payments Workflow (Braintree)**
+    Integrating the merchant system with Braintree will allow your customers to utilize digital wallets such as Google Pay, Apple Pay, Paypal, and Venmo to make payments for purchases secured on your website.
+    You can use Pockyt’s process API (discussed below) and/or secure-pay API (discussed earlier) to integrate with Braintree. 
+    The first step is to create a Braintree account and then add the Braintree JavaScript SDK to the web page to accept payments and remain PCI-compliant.
+    Soon after creating an account, the merchant system will receive a payment_method_nonce, which is a one-time-use reference ID for the payment method.
   contact: {}
 host: https://mapi.Pockyt.yunkeguan.com
 basePath: /
