@@ -249,7 +249,50 @@ POST "https://mapi.yuansfer.com/online/v3/secure-pay"
           type: string
           description: |-
           Required- the possible values are: "ONLINE" for desktop/web app and "WAP" for mobile, YIP for Braintree.
-      responses:
+        - name: description 
+          in: header
+          required: true
+          type: string
+          description: |-
+           Required- The description of the transaction will be displayed on the invoice.
+        - name: note 
+          in: header
+          required: true
+          type: string
+          description: |-
+           Required- The payments notes
+        - name: OsType 
+          in: header
+          required: true
+          type: string
+          description: |-
+           Required- Required when terminal is WAP or APP, the possible values are "IOS" and "ANDROID".
+        - name: timeout 
+          in: header
+          required: true
+          type: string
+          description: |-
+           Required- The timeout in minutes. The default value is 120.
+        - name: goodsInfo
+          in: header
+          required: true
+          type: string
+          description: |-
+           Required- Optional- JSON encoded string of an array of items that the customer purchases from the merchant; Special characters are not supported. e.g.: [{"goods_name":"name1","quantity":"quantity1"}, {"goods_name":"name2","quantity":"quantity2"}]
+        - name: creditType
+          in: header
+          required: true
+          type: string
+          description: |-
+           Required- Optional- The payment type. This is only required when vendor = creditcard. The values are "normal" or "CIT". The default is "normal".
+        - name: verifySign
+          in: header
+          required: true
+          type: string
+          description: |-
+           Required- Required- the parameter signature. It is the calculated MD5 hash value of the API token used to encrypt the request message and authorize transaction requests. For more information, visit Signing API Parameters.
+      
+          responses:
         '200':
           description: The request is successful.
           headers: {}
