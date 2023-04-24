@@ -110,7 +110,7 @@ paths:
           description: |-
            Required- A unique value created and assigned by Pockyt`s support team during the onboarding process
         - name: storeNo
-          in:header
+          in: header
           required: true
           type: string
           description: Required- A unique value created and assigned by Pockyt`s support team during the onboarding process.
