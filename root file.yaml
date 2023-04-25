@@ -8,9 +8,9 @@ info:API documenattion
   description:# Introduction
 
     Pockyt is a payment gateway utilized by various companies in retail and online to process payments, offering a digital wallet for seamless transfers and processing payments through point-of-sale systems, In-store payment, and Pay-out services.
-    # Overview
+    description:# Overview
     Pockyt API provides a powerful solution for integrating custom payment forms seamlessly into your website or application. By utilizing both client and server-side code the API enables the creation of a user friendly checkout form with all necessary payment elements included for the chosen payment method. This allows for a streamlined payment process making it easier for customers to complete transactions and for businesses to manage their payment processing.
-    # Quickstart Tutorial
+    description:# Quickstart Tutorial
      Pockyt offers a secure and user-friendly payment experience for customers, supporting a variety of payment methods such as digital wallets and card payments. Pockyt partners with multiple digital wallet providers, enabling businesses to attract and retain digital-native customers from all over the world. n endpoint.
      We recommend completing our quickstart tutorial on Pockyt products to learn key concepts. 
      1 - Hosted Pages
@@ -25,7 +25,7 @@ info:API documenattion
 
      *  Production API's Base URL's "https://mapi.yuansfer.com/"
 
-    # Payment Methods
+   Heading1:# Payment Methods
 
     Below are our payment integration methods, so you can choose what works best for you
 
@@ -33,25 +33,25 @@ info:API documenattion
 
     * US Based Payment Methods Major Credit Cards Visa, MasterCard, Discover, Amex, Union Pay, Digital Wallets Paypal, Venmo, CashApp
     
-    # Payment Integration Types
+   Heading1:# Payment Integration Types
 
-    * **Online** - Online Payments enable e-wallet and payment acceptance, seamlessly integrated into your e-commerce and point-of-sale (POS) platforms. Refer the Documentation
+    * Online - Online Payments enable e-wallet and payment acceptance, seamlessly integrated into your e-commerce and point-of-sale (POS) platforms. Refer the Documentation
 
-    * **In-store** - In-store payments enable clients to make hassle-free payments through their mobile wallets while maintaining operational efficiency in your stores. Refer the Documentation
+    * In-store - In-store payments enable clients to make hassle-free payments through their mobile wallets while maintaining operational efficiency in your stores. Refer the Documentation
 
-    * **Pay-out**  - Effortlessly make payments to influencers, sellers, and contractors worldwide through their preferred payment methods, including digital wallets (such as PayPal and Alipay) and traditional bank accounts. Refer the Documentation
+    * Pay-out - Effortlessly make payments to influencers, sellers, and contractors worldwide through their preferred payment methods, including digital wallets (such as PayPal and Alipay) and traditional bank accounts. Refer the Documentation
 
-    # Prerequisites 
+    Heading1:# Prerequisites 
      Please ensure you have the following accounts and test devices available to complete your implementation project.	
     * Account ID's in the Apple iOS store, and Google Play store, with the iOS TestFlight application installed on your phone.
     * An iOS device and an Android device on which you will download and install the test digital wallet applications from PayPal, AliPay and CashApp to generate payment barcode strings
 
-    #  Guides
+  Heading1:#Guides
     In the Guides section, developers can find comprehensive documentation and detailed explanations of the API's functionality.
-    ##  Getting Started with Online Payment APIs
+   Heading 2##  Getting Started with Online Payment APIs
     Our Online digital wallet payment processing APIs help you to understand technical concepts and provide step-by-step tutorials for implementing them.
-    ##  Pockyt Developement Sandbox
-    High level steps
+    description#  Pockyt Developement Sandbox
+    :High level steps
     * STEP 1 - Setting up a development account with Pockyt.
     
     * STEP 2 - Obtaining  API credentials.
@@ -100,13 +100,13 @@ info:API documenattion
 
       STEP 3 - Installing the test digital wallet applications.
 
-    ##   Payment Scenarios and API Endpoints
+      description#   Payment Scenarios and API Endpoints
 
      This section provides a step-by-step summary of the primary payment scenarios and explanations of the API endpoints relevant to each use case.
      The following are two use cases and implementation paths
        Pockyt Checkout method** (referred to as the "SecurePay API") allows you to redirect customers to a Pockyt-hosted page for checkout. This is a favorable alternative payment solution if a business cannot host its payment forms for some reason.
        Pockyt Integrated Option** (referred to as the "PrePay API")  is a more suitable option for businesses looking to customize their payment form and retain complete control over the latter. This method allows businesses/merchants to build their UI for all the payment methods preferred by their customers.
-    ## Implementation Option 1 - Checkout API
+       description# Implementation Option 1 - Checkout API
       Using the SecurePay API, merchant websites can send customers to receive payments from Pockyt.
       
       Perform the following steps to use Pockyt Checkout for online payment checkout.
@@ -127,7 +127,7 @@ info:API documenattion
 
       8 - The merchant's website displays the payment confirmation message to the customer.
 
-    ## Implementation Option 2 - Integrated Payments
+      description# Implementation Option 2 - Integrated Payments
     Pockyt Integrated Payments offers a highly customizable payment form for businesses that want to retain complete control over the payment process. 
     This method enables businesses to build their user interface for all preferred payment methods, providing a seamless payment experience for their customers.
     Merchants have the option to integrate Pockyt's APIs directly into their system for self-hosted mobile payments, or they can accept customer payments by integrating their system with Braintree, using both the /secure-pay API and the /process API. 
