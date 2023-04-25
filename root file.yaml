@@ -1,24 +1,18 @@
-swagger: '2.0'
-info:
-  version: '1.0'
-  license: 
-   name: Pockyt
-   url: https://mapi.Pockyt.yunkeguan.com"
-  title: Pockyt API 
-  description: |-
-    # Introduction
+swagger:'2.0'
+info:API documenattion
+  version:1.0'
+  license:Paid 
+   name:Pockyt
+   url:https://mapi.Pockyt.yunkeguan.com"
+  title:Pockyt API 
+  description:# Introduction
 
     Pockyt is a payment gateway utilized by various companies in retail and online to process payments, offering a digital wallet for seamless transfers and processing payments through point-of-sale systems, In-store payment, and Pay-out services.
     # Overview
-
-    Pockyt API provides a powerful solution for integrating custom payment forms seamlessly into your website or application. By utilizing both client- and server-side code, the API enables the creation of a user-friendly checkout form with all necessary payment elements included for the chosen payment method. This allows for a streamlined payment process, making it easier for customers to complete transactions and for businesses to manage their payment processing
-
+    Pockyt API provides a powerful solution for integrating custom payment forms seamlessly into your website or application. By utilizing both client and server-side code the API enables the creation of a user friendly checkout form with all necessary payment elements included for the chosen payment method. This allows for a streamlined payment process making it easier for customers to complete transactions and for businesses to manage their payment processing.
     # Quickstart Tutorial
-
-     Pockyt offers a secure and user-friendly payment experience for customers, supporting a variety of payment methods such as digital wallets and card payments. Pockyt partners with multiple digital wallet providers, enabling businesses to attract and retain digital-native customers from all over the world. n endpoint
-
+     Pockyt offers a secure and user-friendly payment experience for customers, supporting a variety of payment methods such as digital wallets and card payments. Pockyt partners with multiple digital wallet providers, enabling businesses to attract and retain digital-native customers from all over the world. n endpoint.
      We recommend completing our quickstart tutorial on Pockyt products to learn key concepts. 
-
      1 - Hosted Pages
 
      2 - Digital Wallets 
@@ -35,9 +29,9 @@ info:
 
     Below are our payment integration methods, so you can choose what works best for you
 
-    * Asia Pacific Based Digital Wallets: Alipay, WeChatPay, UnionPay, TrueMoney, AliPay HK, TNG, GCash, Dana, KakaoPay, BKash, EasyPasia
+    * Asia Pacific Based Digital Wallets Alipay, WeChatPay, UnionPay, TrueMoney, AliPay HK, TNG, GCash, Dana, KakaoPay, BKash, EasyPasia
 
-    * US Based Payment Methods: Major Credit Cards: Visa, MasterCard, Discover, Amex, Union Pay, Digital Wallets: Paypal, Venmo, CashApp
+    * US Based Payment Methods Major Credit Cards Visa, MasterCard, Discover, Amex, Union Pay, Digital Wallets Paypal, Venmo, CashApp
     
     # Payment Integration Types
 
@@ -66,7 +60,7 @@ info:
    
       1 - **Sandbox API Credentials and Account Information** enable you to test the entire transaction network relevant to your use cases.
     
-    Here's the steps to obtain your Sandbox API credentials:
+    Here's the steps to obtain your Sandbox API credentials
 
       1 - Visit the Pockyt developer's website and go to the Support tab.
 
@@ -88,11 +82,11 @@ info:
      
       2 - **Production API Credentials and Account Information** enable you to begin processing live transactions from digital wallets and other payment methods. 
     
-      Here's the steps to obtain your Production API credentials:
+      Here's the steps to obtain your Production API credentials
 
       1 - Click Login and select Create Account to access the 10-step merchant application form.
 
-      2 - Enter your credentials and submit the required documents: business license or registration voided check or bank letter with company name, and government-issued photo identification.
+      2 - Enter your credentials and submit the required documents business license or registration voided check or bank letter with company name, and government-issued photo identification.
       
       3 - Pockyt's team reviews your application and submits it to each digital wallet service they work.
 
@@ -104,14 +98,14 @@ info:
 
       7 - Each API request includes a verifySign parameter, which is the calculated MD5 hash value of your API token, allowing Pockyt to authenticate and authorize your API calls. For more information, visit "Signing API Parameters".
 
-      * STEP 3 - Installing the test digital wallet applications.
+      STEP 3 - Installing the test digital wallet applications.
 
     ##   Payment Scenarios and API Endpoints
 
      This section provides a step-by-step summary of the primary payment scenarios and explanations of the API endpoints relevant to each use case.
-     The following are two use cases and implementation paths:
-      * **Pockyt Checkout method** (referred to as the "SecurePay API") allows you to redirect customers to a Pockyt-hosted page for checkout. This is a favorable alternative payment solution if a business cannot host its payment forms for some reason.
-      * **Pockyt Integrated Option** (referred to as the "PrePay API")  is a more suitable option for businesses looking to customize their payment form and retain complete control over the latter. This method allows businesses/merchants to build their UI for all the payment methods preferred by their customers.
+     The following are two use cases and implementation paths
+       Pockyt Checkout method** (referred to as the "SecurePay API") allows you to redirect customers to a Pockyt-hosted page for checkout. This is a favorable alternative payment solution if a business cannot host its payment forms for some reason.
+       Pockyt Integrated Option** (referred to as the "PrePay API")  is a more suitable option for businesses looking to customize their payment form and retain complete control over the latter. This method allows businesses/merchants to build their UI for all the payment methods preferred by their customers.
     ## Implementation Option 1 - Checkout API
       Using the SecurePay API, merchant websites can send customers to receive payments from Pockyt.
       
@@ -159,173 +153,118 @@ info:
     *  Braintree complies with the request and passes the transaction results to Pockyt, who relays them back to the merchant website.
 
   
-  contact: {}
-host: https://mapi.Pockyt.yunkeguan.com
-basePath: /
-securityDefinitions: {}
-schemes:
-  - https
-consumes:
-  - application/json
-produces:
-  - application/json
-paths:
-  /Securepayment  
-      post
-      description:|-
-      ## Request URL
-
-POST "https://mapi.yuansfer.com/online/v3/secure-pay"
-
-      Secure Payment API enables merchant websites to send customers to Pockyt for payment processing.
-
-      summary: Secure payment
-      tags:
-        - Authentication
-      operationId: Secure payment
-      deprecated: false
-      produces:
-        - application/json
-      consumes:
-        - text/plain
-      parameters:
-        - name: customerNo
-          in: header
-          required: false
-          type: string
-          description: Optional- the user's ID in Pockyt System; include this parameter if you wish to map a customer with the payment and request a secure checkout.
-        - name: merchantNo 
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- A unique value created and assigned by Pockyt`s support team during the onboarding process
-        - name: storeNo
-          in: header
-          required: True
-          enum:
-            - text/plain
-          type: string
-          description: Required- A unique value created and assigned by Pockyt`s support team during the onboarding process.
-        - name: amount
-          in: body
-          required: true
-          type: string
-          description: |-
-            The transaction amount
-        - name: currency 
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- when the currency is "GBP", the settlement currency is "GBP". All other currencies settle with "USD
-        - name: vendor 
-          in: header
-          required: true
-          type: string
-          description: |-
-            Required- the possible payment channels are "alipay","wechatpay", "paypal", "venmo", "unionpay", "creditcard","truemoney", "alipay_hk", "tng", "gcash", "dana", "kakaopay","bkash", "easypaisa","cashapppay"
-        - name: ipUrl 
-          in: header
-          required: true
-          type: string
-          description: |-
-            Required- the asynchronous notification address. The IPN URL must be secure. For more information, visit the IPN section.    
-        - name: callbackUrl 
-          in: header
-          required: true
-          type: string
-          description: |-
-             Required- the synchronous callback HTTP address to receive notification messages for events. The callback URL follows macro substitution rules like xxxcallback_url?trans_no= {amount}&amount={amount}. Then Pockyt automatically replaces the values of {} for a list of parameters.
-        - name: reference 
-          in: header
-          required: true
-          type: string
-          description: |-
-          Required- the Invoice Number of the transaction in the merchant's system.  
-        - name: terminal
-          in: header
-          required: true
-          type: string
-          description: |-
-          Required- the possible values are: "ONLINE" for desktop/web app and "WAP" for mobile, YIP for Braintree.
-        - name: description 
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- The description of the transaction will be displayed on the invoice.
-        - name: note 
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- The payments notes
-        - name: OsType 
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- Required when terminal is WAP or APP, the possible values are "IOS" and "ANDROID".
-        - name: timeout 
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- The timeout in minutes. The default value is 120.
-        - name: goodsInfo
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- Optional- JSON encoded string of an array of items that the customer purchases from the merchant; Special characters are not supported. e.g.: [{"goods_name":"name1","quantity":"quantity1"}, {"goods_name":"name2","quantity":"quantity2"}]
-        - name: creditType
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- Optional- The payment type. This is only required when vendor = creditcard. The values are "normal" or "CIT". The default is "normal".
-        - name: verifySign
-          in: header
-          required: true
-          type: string
-          description: |-
-           Required- Required- the parameter signature. It is the calculated MD5 hash value of the API token used to encrypt the request message and authorize transaction requests. For more information, visit Signing API Parameters.
+contact:{}
+host:https://mapi.Pockyt.yunkeguan.com
+basePath:/
+securityDefinitions:{}
+schemes:- https
+consumes:- application/json
+produces:- application/json
+paths:/Securepayment  
+post:description:|-
+      Request URL
+      Securepayment API enables merchant websites to send customers to Pockyt for payment processing.
+      summary:Securepayment
+      tags:- Authentication
+      operationId:Securepayment
+      deprecated:false
+      produces:application/json
+      consumes:text/plain
+      parameters name:customerNo
+          in:header
+          required:false
+          type:string
+          description:Optional- the user's ID in Pockyt System; include this parameter if you wish to map a customer with the payment and request a secure checkout.
+        -name:merchantNo 
+          in:header
+          required:true
+          type:string
+          description:Required- A unique value created and assigned by Pockyt`s support team during the onboarding process
+        -name:storeNo
+          in:header
+          required:True
+          enum:text/plain
+          type:string
+          description:Required- A unique value created and assigned by Pockyt`s support team during the onboarding process.
+        -name:amount
+          in:body
+          required:true
+          type:string
+          description:The transaction amount
+        -name:currency 
+          in:header
+          required:true
+          type:string
+          description:Required- when the currency is "GBP", the settlement currency is "GBP". All other currencies settle with "USD
+        -name:vendor 
+          in:header
+          required:true
+          type:string
+          description:Required- the possible payment channels are "alipay","wechatpay", "paypal", "venmo", "unionpay", "creditcard","truemoney", "alipay_hk", "tng", "gcash", "dana", "kakaopay","bkash", "easypaisa","cashapppay"
+        -name:ipUrl 
+          in:header
+          required:true
+          type:string
+          description:Required- the asynchronous notification address. The IPN URL must be secure. For more information, visit the IPN section.    
+        -name:callbackUrl 
+          in:header
+          required:true
+          type:string
+          description:Required- the synchronous callback HTTP address to receive notification messages for events. The callback URL follows macro substitution rules like xxxcallback_url?trans_no= {amount}&amount={amount}. Then Pockyt automatically replaces the values of {} for a list of parameters.
+        -name:reference 
+          in:header
+          required:true
+          type:string
+          description:Required- the Invoice Number of the transaction in the merchant's system.  
+        -name:terminal
+          in:header
+          required:true
+          type:string
+          description:Required- the possible values are "ONLINE" for desktop/web app and "WAP" for mobile, YIP for Braintree.
+        -name:description 
+          in:header
+          required:true
+          type:string
+          description:Required- The description of the transaction will be displayed on the invoice.
+        -name:note 
+          in:header
+          required:true
+          type:string
+          description:Required- The payments notes
+        -name:OsType 
+          in:header
+          required:true
+          type:string
+          description:Required- Required when terminal is WAP or APP, the possible values are "IOS" and "ANDROID".
+        -name:timeout 
+          in:header
+          required:true
+          type:string
+          description:Required- The timeout in minutes. The default value is 120.
+        -name:goodsInfo
+          in:header
+          required:true
+          type:string
+          description:Required- Optional- JSON encoded string of an array of items that the customer purchases from the merchant; Special characters are not supported. e.g [{"goods_name":"name1","quantity":"quantity1"}, {"goods_name":"name2","quantity":"quantity2"}]
+        -name:creditType
+          in:header
+          required:true
+          type:string
+          description:Required- Optional- The payment type. This is only required when vendor = creditcard. The values are "normal" or "CIT". The default is "normal".
+        -name:verifySign
+          in:header
+          required:true
+          type:string
+          description:Required- Required- the parameter signature. It is the calculated MD5 hash value of the API token used to encrypt the request message and authorize transaction requests. For more information, visit Signing API Parameters.
       
-          responses:
-        '200':
-          description: The request is successful.
-          headers: {}
-        '201':
-          description: The request is successful.
-          headers: {}
-        '400':
-          description: Incorrect username or password.
-          headers: {}
-tags:
-  - name: Authentication
-    description: 'Add description'
-  
-    
-  
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-
-   
-        
-             
-    
-
-    
-
-   
-
+          responses:200
+          description:The request is successful.
+          headers:{}
+        '201'
+          description:The request is successful.
+          headers:{}
+        '400'
+          description:Incorrect username or password.
+          headers:{}
+tags:name:Authentication
+description:Add description
