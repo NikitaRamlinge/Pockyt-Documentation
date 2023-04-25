@@ -150,9 +150,7 @@ info:API documenattion
 
     + Pockyt uses the payment_method_nonce and transaction ID to request that Braintree process the payment.
 
-    +  Braintree complies with the request and passes the transaction results to Pockyt, who relays them back to the merchant website.
-
-  
+    +  Braintree complies with the request and passes the transaction results to Pockyt, who relays them back to the merchant website. 
 contact:{}
 host:https://mapi.Pockyt.yunkeguan.com
 basePath:/
