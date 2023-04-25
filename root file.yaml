@@ -21,30 +21,30 @@ info:API documenattion
 
     The same Please note that all the tutorials and explanations in this document will reference the Pockyt's base Sandbox URLs
 
-     *  A Sandbox API's Base URL  "https://mapi.yuansfer.yunkeguan.com"
+     +  A Sandbox API's Base URL  "https://mapi.yuansfer.yunkeguan.com"
 
-     *  Production API's Base URL's "https://mapi.yuansfer.com/"
+     +  Production API's Base URL's "https://mapi.yuansfer.com/"
 
    Heading1:# Payment Methods
 
     Below are our payment integration methods, so you can choose what works best for you
 
-    * Asia Pacific Based Digital Wallets Alipay, WeChatPay, UnionPay, TrueMoney, AliPay HK, TNG, GCash, Dana, KakaoPay, BKash, EasyPasia
+    + Asia Pacific Based Digital Wallets Alipay, WeChatPay, UnionPay, TrueMoney, AliPay HK, TNG, GCash, Dana, KakaoPay, BKash, EasyPasia
 
-    * US Based Payment Methods Major Credit Cards Visa, MasterCard, Discover, Amex, Union Pay, Digital Wallets Paypal, Venmo, CashApp
+    + US Based Payment Methods Major Credit Cards Visa, MasterCard, Discover, Amex, Union Pay, Digital Wallets Paypal, Venmo, CashApp
     
    Heading1:# Payment Integration Types
 
-    * Online - Online Payments enable e-wallet and payment acceptance, seamlessly integrated into your e-commerce and point-of-sale (POS) platforms. Refer the Documentation
+    + Online - Online Payments enable e-wallet and payment acceptance, seamlessly integrated into your e-commerce and point-of-sale (POS) platforms. Refer the Documentation
 
-    * In-store - In-store payments enable clients to make hassle-free payments through their mobile wallets while maintaining operational efficiency in your stores. Refer the Documentation
+    + In-store - In-store payments enable clients to make hassle-free payments through their mobile wallets while maintaining operational efficiency in your stores. Refer the Documentation
 
-    * Pay-out - Effortlessly make payments to influencers, sellers, and contractors worldwide through their preferred payment methods, including digital wallets (such as PayPal and Alipay) and traditional bank accounts. Refer the Documentation
+    + Pay-out - Effortlessly make payments to influencers, sellers, and contractors worldwide through their preferred payment methods, including digital wallets (such as PayPal and Alipay) and traditional bank accounts. Refer the Documentation
 
     Heading1:# Prerequisites 
      Please ensure you have the following accounts and test devices available to complete your implementation project.	
-    * Account ID's in the Apple iOS store, and Google Play store, with the iOS TestFlight application installed on your phone.
-    * An iOS device and an Android device on which you will download and install the test digital wallet applications from PayPal, AliPay and CashApp to generate payment barcode strings
+    + Account ID's in the Apple iOS store, and Google Play store, with the iOS TestFlight application installed on your phone.
+    + An iOS device and an Android device on which you will download and install the test digital wallet applications from PayPal, AliPay and CashApp to generate payment barcode strings
 
   Heading1:#Guides
     In the Guides section, developers can find comprehensive documentation and detailed explanations of the API's functionality.
@@ -52,9 +52,9 @@ info:API documenattion
     Our Online digital wallet payment processing APIs help you to understand technical concepts and provide step-by-step tutorials for implementing them.
     Steps#  Pockyt Developement Sandbox
     High level steps
-    * STEP 1 - Setting up a development account with Pockyt.
+    + STEP 1 - Setting up a development account with Pockyt.
     
-    * STEP 2 - Obtaining  API credentials.
+    + STEP 2 - Obtaining  API credentials.
     
       For Obtaining API credentails, you need two sets of credentials from Pockyt to complete your implementation project.
    
@@ -132,25 +132,25 @@ info:API documenattion
     This method enables businesses to build their user interface for all preferred payment methods, providing a seamless payment experience for their customers.
     Merchants have the option to integrate Pockyt's APIs directly into their system for self-hosted mobile payments, or they can accept customer payments by integrating their system with Braintree, using both the /secure-pay API and the /process API. 
     
-    **Pockyt Integrated Payments Workflow (Braintree)**
+    Pockyt Integrated Payments Workflow (Braintree)
     Integrating the merchant system with Braintree will allow your customers to utilize digital wallets such as Google Pay, Apple Pay, Paypal, and Venmo to make payments for purchases secured on your website.
     You can use Pockyt`s process API (discussed below) and/or secure-pay API (discussed earlier) to integrate with Braintree. 
     The first step is to create a Braintree account and then add the Braintree JavaScript SDK to the web page to accept payments and remain PCI-compliant.
     Soon after creating an account, the merchant system will receive a payment_method_nonce, which is a one-time-use reference ID for the payment method.
 
-    **API Workflow for Merchants**
+    API Workflow for Merchants
 
-    * The merchant system registers first-time customers by calling the create API, generating a customer number stored in the merchant's database for future reference.
+    + The merchant system registers first-time customers by calling the create API, generating a customer number stored in the merchant's database for future reference.
 
-    * When the customer is ready to make a payment, the merchant website displays its payment page and calls the secure-pay API with YIP as the terminal value.
+    + When the customer is ready to make a payment, the merchant website displays its payment page and calls the secure-pay API with YIP as the terminal value.
 
-    * The merchant system receives an authorization token and transaction ID instead of a cashier URL, which is required to accept payments with Braintree. 
+    + The merchant system receives an authorization token and transaction ID instead of a cashier URL, which is required to accept payments with Braintree. 
 
-    * Upon customer confirmation, the merchant system calls the process API to initiate the transaction.
+    + Upon customer confirmation, the merchant system calls the process API to initiate the transaction.
 
-    * Pockyt uses the payment_method_nonce and transaction ID to request that Braintree process the payment.
+    + Pockyt uses the payment_method_nonce and transaction ID to request that Braintree process the payment.
 
-    *  Braintree complies with the request and passes the transaction results to Pockyt, who relays them back to the merchant website.
+    +  Braintree complies with the request and passes the transaction results to Pockyt, who relays them back to the merchant website.
 
   
 contact:{}
