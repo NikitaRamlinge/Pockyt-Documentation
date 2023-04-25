@@ -50,8 +50,8 @@ info:API documenattion
     In the Guides section, developers can find comprehensive documentation and detailed explanations of the API's functionality.
    Heading 2##  Getting Started with Online Payment APIs
     Our Online digital wallet payment processing APIs help you to understand technical concepts and provide step-by-step tutorials for implementing them.
-    description#  Pockyt Developement Sandbox
-    :High level steps
+    Steps#  Pockyt Developement Sandbox
+    High level steps
     * STEP 1 - Setting up a development account with Pockyt.
     
     * STEP 2 - Obtaining  API credentials.
@@ -100,7 +100,7 @@ info:API documenattion
 
       STEP 3 - Installing the test digital wallet applications.
 
-      description#   Payment Scenarios and API Endpoints
+      Heading 1#   Payment Scenarios and API Endpoints
 
      This section provides a step-by-step summary of the primary payment scenarios and explanations of the API endpoints relevant to each use case.
      The following are two use cases and implementation paths
